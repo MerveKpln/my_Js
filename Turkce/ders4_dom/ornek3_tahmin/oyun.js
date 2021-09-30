@@ -38,10 +38,23 @@ document.querySelector(".kontrol").onclick = function(){
     
 }
 //tekrar butona basildiginda baslangic degerleri yuklensin
-    document.querySelector("tekrar").onclick=()=>{
+    document.querySelector(".tekrar").onclick=()=>{
         ratsgeleSayi= Math.floor(Math.random()*20+1);
 
-        document.querySelector(".body").style.backgroundColor="#2d3436";
+        document.querySelector("body").style.backgroundColor="#2d3436";
         document.querySelector(".question").textContent="?";
-        document.querySelector(".mesaj").textContent="Tahmine baslaniyor"
+        document.querySelector(".mesaj").textContent="Tahmine baslaniyor!!!";
+        puanPc=10;
+        document.querySelector(".skor").textContent=puanPc;
+        document.querySelector(".tahmin").value="";
+
     }
+//klavyeden bir tusa basildiginda calis
+document.querySelector(".tahmin").onkeydown= function(olay){
+    if (olay.keyCode==13) {
+        document.querySelector(".kontrol").onclick();
+    } 
+    if (olay.keyCode==82) {
+        document.querySelector(".tekrar").onclick();
+    }
+}

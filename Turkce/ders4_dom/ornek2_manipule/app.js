@@ -47,6 +47,11 @@ document.querySelector(".sil").onclick= function(){
 const p =document.querySelector(".forH1");
 p.innerHTML= `<h1>${"Programlama Dilleri"}</h1>`;
 
+//todo SEATTRIBUTE metodu ****************
+//document.querySelector(".checkbox").setAttribute("type","checkbox");
+
+
+
 // klavyeden bir tusa basildiginda buyusun kuculsun
 document.querySelector(".textbox").onkeyup= function(){
     const checkbox = document.querySelector(".checkbox");
